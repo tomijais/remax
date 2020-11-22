@@ -5,7 +5,7 @@ GENERALES
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Montserrat";
+  font-family: "Montserrat"!important;
 }
 
 html {
@@ -54,6 +54,13 @@ nav.navbar div.collapse {
   font-size: 12px;
 }
 
+button.navbar-toggler{
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  right: 10px;
+}
+
 /*----------------------------------
 MEDIA QUERY HEADER 
 -------------------------------*/
@@ -97,6 +104,7 @@ div.slider {
   position: relative;
   text-align: center;
   color: white;
+  
 }
 
 .slider-text {
@@ -603,6 +611,24 @@ input[type="reset"] {
 .postulate ::placeholder {
   color: brown;
 }
+
+div.validate-NomYApe,
+div.validate-edad,
+div.validate-email,
+div.validate-Residencia,
+div.validate-Telefono,
+div.validate-exp,
+div.validate-independiente,
+div.validate-teamwork,
+div.validate-horas{
+  color: black;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+  display: inline-block;
+  
+}
+
 
 
 

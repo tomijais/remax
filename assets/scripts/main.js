@@ -19,35 +19,27 @@ $(document).ready(function() {
 
     if (mediaqueryList.matches) { //Primer carga segun el tamano (Propuesta)
         LoadJson(propuesta, 3, 1)
-        console.log("menos de 992")
     } else {
         LoadJson(propuesta, 3, 0)
-        console.log("mas de 992")
     }
     if (mediaqueryListAgent.matches) { //Primer carga segun el tamano (Agentes)
         LoadJson(team, 1, 1)
-        console.log("menos de 1200")
     } else {
         LoadJson(team, 1, 0)
-        console.log("mas de 1200")
     }
 
     mediaqueryList.addListener(function(EventoMediaQueryList) { //cambio de la construccion segun los cambios del tamano(Propuesta)
         if (mediaqueryList.matches) {
             LoadJson(propuesta, 3, 1)
-            console.log("se fue a menos de 992")
         } else {
             LoadJson(propuesta, 3, 0)
-            console.log("se pasa de 992")
         }
     });
     mediaqueryListAgent.addListener(function(EventoMediaQueryList) {
         if (mediaqueryListAgent.matches) {
             LoadJson(team, 1, 1)
-            console.log("se fue a menos de 1200")
         } else {
             LoadJson(team, 1, 0)
-            console.log("se pasa de 1200")
         }
     });
 })
@@ -180,7 +172,6 @@ function fillContainerAgent(obj, MQ) {
             }*/
         })
     } else { //menor a 1200, construccion simple
-        console.log("construccion simple")
         obj.forEach(function(obj, index) {
             containerAgent.append(`<div class=" col-sm-4 col-md-3  col-xl-2 ">
                         <article class="agent">
