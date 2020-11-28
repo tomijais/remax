@@ -213,7 +213,6 @@ validaciones.hours();
       text: "Por favor revisa los campos e intentalo nuevamente",
     });
   } else {
-    setTimeout(function () {
       emailjs.sendForm("service_u4g8id2", "template_ATflrdWt_clone", form)
       .then(
         function (response) {
@@ -234,6 +233,11 @@ validaciones.hours();
             "La informacion se ha enviado satisfactoriamente!",
             "success"
           );
+
+            setTimeout(function() {
+              window.location.pathname = "gracias.html"
+            }, 1000)
+
         },
         function (error) {
           console.log("FAILED...", error);
@@ -256,6 +260,5 @@ validaciones.hours();
           });
         }
       );
-    }, 750);
   }
 });

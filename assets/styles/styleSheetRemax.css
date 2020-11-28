@@ -34,6 +34,48 @@ p {
   font-size: 18px;
 }
 
+
+div.boton-postulate{
+  display: flex;
+  justify-content: center;
+}
+
+div.boton-postulate a#bajar-postulate{
+  padding: 1vh;
+  margin: 1vh 0;
+  background-color: #d51e30;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+}
+
+
+
+div.boton-postulate a#bajar-postulate:hover{
+  text-decoration: none;
+  color: white;
+}
+
+
+div.boton-postulate-slider a#bajar-postulate{
+  padding: 1vh;
+  margin: 1vh 0;
+  background-color: #d51e30;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+}
+
+
+div.boton-postulate-slider{
+  display: flex;
+  justify-content: center;
+}
+
+div.boton-postulate-slider a#bajar-postulate:hover{
+  text-decoration: none;
+  color: white;
+}
 /*----------
 HEADER
 ----------*/
@@ -214,6 +256,7 @@ PORQUE REMAX
   padding-left: 0.5em;
   margin-top: 3em;
   line-height: 23.8px;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.5);
 }
 
 .porque img.imgPq {
@@ -724,3 +767,4 @@ MEDIA QUERY FOOTER
     margin-right: 0em;
   }
 }
+
