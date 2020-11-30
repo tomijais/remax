@@ -56,6 +56,16 @@ div.boton-postulate a#bajar-postulate:hover{
   color: white;
 }
 
+div.boton-postulate-slider{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 80%;
+  right: 43%;
+  z-index: 1;
+  margin: 0;
+
+}
 
 div.boton-postulate-slider a#bajar-postulate{
   padding: 1vh;
@@ -64,13 +74,10 @@ div.boton-postulate-slider a#bajar-postulate{
   display: flex;
   justify-content: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+  width: 15vw;
 }
 
 
-div.boton-postulate-slider{
-  display: flex;
-  justify-content: center;
-}
 
 div.boton-postulate-slider a#bajar-postulate:hover{
   text-decoration: none;
@@ -767,4 +774,3 @@ MEDIA QUERY FOOTER
     margin-right: 0em;
   }
 }
-
