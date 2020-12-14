@@ -213,6 +213,9 @@ validaciones.hours();
       text: "Por favor revisa los campos e intentalo nuevamente",
     });
   } else {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault
+    });
       emailjs.sendForm("service_u4g8id2", "template_ATflrdWt_clone", form)
       .then(
         function (response) {
@@ -236,7 +239,7 @@ validaciones.hours();
 
             setTimeout(function() {
               window.location.pathname = "gracias.html"
-            }, 1000)
+            }, 3000)
 
         },
         function (error) {
