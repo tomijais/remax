@@ -53,6 +53,19 @@ div.boton-postulate a#bajar-postulate:hover {
   color: white;
 }
 
+<<<<<<< HEAD
+=======
+div.boton-postulate-slider {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 80%;
+  right: 43%;
+  z-index: 1;
+  margin: 0;
+}
+
+>>>>>>> 7ff2eeabcccf81e56a9bcc114662f52599aad72e
 div.boton-postulate-slider a#bajar-postulate {
   padding: 1vh;
   margin: 1vh 0;
@@ -60,8 +73,10 @@ div.boton-postulate-slider a#bajar-postulate {
   display: flex;
   justify-content: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+  width: 15vw;
 }
 
+<<<<<<< HEAD
 div.boton-postulate-slider {
   position: absolute;
   top: 81%;
@@ -70,10 +85,25 @@ div.boton-postulate-slider {
 
 }
 
+=======
+>>>>>>> 7ff2eeabcccf81e56a9bcc114662f52599aad72e
 div.boton-postulate-slider a#bajar-postulate:hover {
   text-decoration: none;
   color: white;
 }
+
+@media screen and (max-width: 769px) {
+
+  div.boton-postulate-slider {
+    top: 76%;
+    right: 35%;
+  }
+
+  div.boton-postulate-slider a#bajar-postulate {
+    width: 30vw;
+  }
+}
+
 /*----------
 HEADER
 ----------*/
