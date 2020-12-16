@@ -9,6 +9,8 @@ const REG_EX_EMAIL = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i
 
 let form = document.querySelector("form.email-form");
 
+let lds_ring = document.querySelector('div.lds-ring')
+
 // Declaracion de campos de texto
 let inputName = document.querySelector("input[name='NomYApe']");
 let inputAge = document.querySelector("input[name='edad']");
@@ -192,7 +194,7 @@ const validaciones = {
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
-
+  lds_ring.style.display = "inline-block"
 validaciones.nombre();
 validaciones.mail();
 validaciones.age();
@@ -212,9 +214,9 @@ validaciones.hours();
       title: "Oops...",
       text: "Por favor revisa los campos e intentalo nuevamente",
     });
+    lds_ring.style.display = "none"
   } else {
     form.addEventListener("submit", function (e) {
-      e.preventDefault
     });
       emailjs.sendForm("service_u4g8id2", "template_ATflrdWt_clone", form)
       .then(
@@ -239,6 +241,8 @@ validaciones.hours();
 
             setTimeout(function() {
               window.location.pathname = "gracias.html"
+    lds_ring.style.display = "none"
+
             }, 3000)
 
         },

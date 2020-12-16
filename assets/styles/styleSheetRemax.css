@@ -52,9 +52,6 @@ div.boton-postulate a#bajar-postulate:hover {
   text-decoration: none;
   color: white;
 }
-
-<<<<<<< HEAD
-=======
 div.boton-postulate-slider {
   display: flex;
   justify-content: center;
@@ -65,7 +62,6 @@ div.boton-postulate-slider {
   margin: 0;
 }
 
->>>>>>> 7ff2eeabcccf81e56a9bcc114662f52599aad72e
 div.boton-postulate-slider a#bajar-postulate {
   padding: 1vh;
   margin: 1vh 0;
@@ -76,17 +72,9 @@ div.boton-postulate-slider a#bajar-postulate {
   width: 15vw;
 }
 
-<<<<<<< HEAD
-div.boton-postulate-slider {
-  position: absolute;
-  top: 81%;
-  left: 46%;
-  z-index: 1;
 
-}
 
-=======
->>>>>>> 7ff2eeabcccf81e56a9bcc114662f52599aad72e
+
 div.boton-postulate-slider a#bajar-postulate:hover {
   text-decoration: none;
   color: white;
@@ -777,5 +765,43 @@ MEDIA QUERY FOOTER
 @media only screen and (min-width: 830px) {
   footer .footerP {
     margin-right: 0em;
+  }
+}
+
+
+
+.lds-ring {
+  display: none;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid rgba(40, 58, 98, 1);
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color:rgba(40, 58, 98, 1) transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
