@@ -13,37 +13,25 @@ let lds_ring = document.querySelector('div.lds-ring')
 
 // Declaracion de campos de texto
 let inputName = document.querySelector("input[name='NomYApe']");
-let inputAge = document.querySelector("input[name='edad']");
 let inputEmail = document.querySelector("input[name='email']");
 let inputResidence = document.querySelector("input[name='Residencia']");
 let inputPhone = document.querySelector("input[name='Telefono']");
 let inputExp = document.querySelector("input[name='exp']");
-let inputIndep = document.querySelector("input[name='independiente']");
-let inputTeam = document.querySelector("input[name='teamwork']");
-let inputHours = document.querySelector("input[name='horas']");
 
 // Declaracion de campos de errores
 let errorName = document.querySelector("div.validate-NomYApe");
-let errorAge = document.querySelector("div.validate-edad");
 let errorEmail = document.querySelector("div.validate-email");
 let errorResidence = document.querySelector("div.validate-Residencia");
 let errorPhone = document.querySelector("div.validate-Telefono");
 let errorExp = document.querySelector("div.validate-exp");
-let errorIndep = document.querySelector("div.validate-independiente");
-let errorTeam = document.querySelector("div.validate-teamwork");
-let errorHours = document.querySelector("div.validate-horas");
 
 //Declaracion de errores
 let errors = {
   name: "El campo no puede quedar vacio",
-  age: "El campo no puede quedar vacio",
   mail: "El campo no puede quedar vacio",
   residence: "El campo no puede quedar vacio",
   phone: "El campo no puede quedar vacio",
   exp: "El campo no puede quedar vacio",
-  indep: "El campo no puede quedar vacio",
-  team: "El campo no puede quedar vacio",
-  hours: "El campo no puede quedar vacio",
 };
 
 //Validaciones
@@ -76,21 +64,21 @@ const validaciones = {
       errorEmail.innerText = "";
     }
   },
-  age: function () {
-    errors.age = "El campo no puede quedar vacio";
-    if (inputAge.value.length == 0) {
+  // age: function () {
+  //   errors.age = "El campo no puede quedar vacio";
+  //   if (inputAge.value.length == 0) {
       
-      errorAge.innerText = errors.age;
-    } else if (inputAge.value.length <= 1) {
-      errors.age = "El campo no puede tener menos de 2 caracteres";
-      errorAge.innerText = errors.age;
-    } else {
-      if (errors.age) {
-        delete errors.age;
-      }
-      errorAge.innerText = "";
-    }
-  },
+  //     errorAge.innerText = errors.age;
+  //   } else if (inputAge.value.length <= 1) {
+  //     errors.age = "El campo no puede tener menos de 2 caracteres";
+  //     errorAge.innerText = errors.age;
+  //   } else {
+  //     if (errors.age) {
+  //       delete errors.age;
+  //     }
+  //     errorAge.innerText = "";
+  //   }
+  // },
   residence: function () {
     errors.residence = "El campo no puede quedar vacio";
     if (inputResidence.value.length == 0) {
@@ -133,60 +121,56 @@ const validaciones = {
       errorExp.innerText = "";
     }
   },
-  indep: function () {
-    errors.indep = "El campo no puede quedar vacio";
-    if (inputIndep.value.length == 0) {
-      errorIndep.innerText = errors.indep;
-    } else if (inputIndep.value.length <= 1) {
-      errors.indep = "El campo no puede tener menos de 2 caracteres";
-      errorIndep.innerText = errors.indep;
-    } else {
-      if (errors.indep) {
-        delete errors.indep;
-      }
-      errorIndep.innerText = "";
-    }
-  },
-  teamwork: function () {
-    errors.team = "El campo no puede quedar vacio";
-    if (inputTeam.value.length == 0) {
-      errorTeam.innerText = errors.team;
-    } else if (inputTeam.value.length <= 1) {
-      errors.team = "El campo no puede tener menos de 2 caracteres";
-      errorTeam.innerText = errors.team;
-    } else {
-      if (errors.team) {
-        delete errors.team;
-      }
-      errorTeam.innerText = "";
-    }
-  },
-  hours: function () {
-    errors.hours = "El campo no puede quedar vacio";
-    if (inputHours.value.length == 0) {
-      errorHours.innerText = errors.hours;
-    } else if (inputHours.value.length <= 2) {
-      errors.hours = "El campo no puede tener menos de 3 caracteres";
-      errorHours.innerText = errors.hours;
-    } else {
-      if (errors.hours) {
-        delete errors.hours;
-      }
-      errorHours.innerText = "";
-    }
-  },
+  // indep: function () {
+  //   errors.indep = "El campo no puede quedar vacio";
+  //   if (inputIndep.value.length == 0) {
+  //     errorIndep.innerText = errors.indep;
+  //   } else if (inputIndep.value.length <= 1) {
+  //     errors.indep = "El campo no puede tener menos de 2 caracteres";
+  //     errorIndep.innerText = errors.indep;
+  //   } else {
+  //     if (errors.indep) {
+  //       delete errors.indep;
+  //     }
+  //     errorIndep.innerText = "";
+  //   }
+  // },
+  // teamwork: function () {
+  //   errors.team = "El campo no puede quedar vacio";
+  //   if (inputTeam.value.length == 0) {
+  //     errorTeam.innerText = errors.team;
+  //   } else if (inputTeam.value.length <= 1) {
+  //     errors.team = "El campo no puede tener menos de 2 caracteres";
+  //     errorTeam.innerText = errors.team;
+  //   } else {
+  //     if (errors.team) {
+  //       delete errors.team;
+  //     }
+  //     errorTeam.innerText = "";
+  //   }
+  // },
+  // hours: function () {
+  //   errors.hours = "El campo no puede quedar vacio";
+  //   if (inputHours.value.length == 0) {
+  //     errorHours.innerText = errors.hours;
+  //   } else if (inputHours.value.length <= 2) {
+  //     errors.hours = "El campo no puede tener menos de 3 caracteres";
+  //     errorHours.innerText = errors.hours;
+  //   } else {
+  //     if (errors.hours) {
+  //       delete errors.hours;
+  //     }
+  //     errorHours.innerText = "";
+  //   }
+  // },
 };
 
 
   inputName.onblur = validaciones.nombre;
   inputEmail.onblur = validaciones.mail;
-  inputAge.onblur = validaciones.age;
   inputResidence.onblur = validaciones.residence;
   inputPhone.onblur = validaciones.phone;
   inputExp.onblur = validaciones.exp;
-  inputIndep.onblur = validaciones.indep;
-  inputTeam.onblur = validaciones.teamwork;
-  inputHours.onblur = validaciones.hours;
 
 
 
@@ -195,15 +179,13 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   lds_ring.style.display = "inline-block"
+
+  console.log(e)
 validaciones.nombre();
 validaciones.mail();
-validaciones.age();
 validaciones.residence();
 validaciones.phone();
 validaciones.exp();
-validaciones.indep();
-validaciones.teamwork();
-validaciones.hours();
 
 
 
@@ -224,14 +206,10 @@ validaciones.hours();
           console.log("SUCCESS!", response.status, response.text);
 
           inputName.value = "";
-          inputAge.value = "";
           inputEmail.value = "";
           inputResidence.value = "";
           inputPhone.value = "";
           inputExp.value = "";
-          inputIndep.value = "";
-          inputTeam.value = "";
-          inputHours.value = "";
 
           Swal.fire(
             "Muchas gracias!",
@@ -250,14 +228,10 @@ validaciones.hours();
           console.log("FAILED...", error);
 
           inputName.value = "";
-          inputAge.value = "";
           inputEmail.value = "";
           inputResidence.value = "";
           inputPhone.value = "";
           inputExp.value = "";
-          inputIndep.value = "";
-          inputTeam.value = "";
-          inputHours.value = "";
 
           Swal.fire({
             icon: "error",
