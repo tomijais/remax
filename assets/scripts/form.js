@@ -17,6 +17,7 @@ let inputEmail = document.querySelector("input[name='email']");
 let inputResidence = document.querySelector("input[name='Residencia']");
 let inputPhone = document.querySelector("input[name='Telefono']");
 let inputExp = document.querySelector("input[name='exp']");
+let inputIndep = document.querySelector("input[name='independiente']");
 
 // Declaracion de campos de errores
 let errorName = document.querySelector("div.validate-NomYApe");
@@ -24,6 +25,7 @@ let errorEmail = document.querySelector("div.validate-email");
 let errorResidence = document.querySelector("div.validate-Residencia");
 let errorPhone = document.querySelector("div.validate-Telefono");
 let errorExp = document.querySelector("div.validate-exp");
+let errorIndep = document.querySelector("div.validate-independiente");
 
 //Declaracion de errores
 let errors = {
@@ -32,6 +34,7 @@ let errors = {
   residence: "El campo no puede quedar vacio",
   phone: "El campo no puede quedar vacio",
   exp: "El campo no puede quedar vacio",
+  indep: "El campo no puede quedar vacio",
 };
 
 //Validaciones
@@ -121,20 +124,20 @@ const validaciones = {
       errorExp.innerText = "";
     }
   },
-  // indep: function () {
-  //   errors.indep = "El campo no puede quedar vacio";
-  //   if (inputIndep.value.length == 0) {
-  //     errorIndep.innerText = errors.indep;
-  //   } else if (inputIndep.value.length <= 1) {
-  //     errors.indep = "El campo no puede tener menos de 2 caracteres";
-  //     errorIndep.innerText = errors.indep;
-  //   } else {
-  //     if (errors.indep) {
-  //       delete errors.indep;
-  //     }
-  //     errorIndep.innerText = "";
-  //   }
-  // },
+  indep: function () {
+    errors.indep = "El campo no puede quedar vacio";
+    if (inputIndep.value.length == 0) {
+      errorIndep.innerText = errors.indep;
+    } else if (inputIndep.value.length <= 1) {
+      errors.indep = "El campo no puede tener menos de 2 caracteres";
+      errorIndep.innerText = errors.indep;
+    } else {
+      if (errors.indep) {
+        delete errors.indep;
+      }
+      errorIndep.innerText = "";
+    }
+  },
   // teamwork: function () {
   //   errors.team = "El campo no puede quedar vacio";
   //   if (inputTeam.value.length == 0) {
@@ -171,6 +174,7 @@ const validaciones = {
   inputResidence.onblur = validaciones.residence;
   inputPhone.onblur = validaciones.phone;
   inputExp.onblur = validaciones.exp;
+  inputIndep.onblur = validaciones.indep;
 
 
 
@@ -186,6 +190,7 @@ validaciones.mail();
 validaciones.residence();
 validaciones.phone();
 validaciones.exp();
+validaciones.indep();
 
 
 
@@ -210,6 +215,7 @@ validaciones.exp();
           inputResidence.value = "";
           inputPhone.value = "";
           inputExp.value = "";
+          inputIndep.value = "";
 
           Swal.fire(
             "Muchas gracias!",
@@ -232,6 +238,7 @@ validaciones.exp();
           inputResidence.value = "";
           inputPhone.value = "";
           inputExp.value = "";
+          inputIndep.value = "";
 
           Swal.fire({
             icon: "error",
