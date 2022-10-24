@@ -5,7 +5,7 @@ GENERALES
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Montserrat" !important;
+  font-family: "Montserrat";
 }
 
 html {
@@ -804,4 +804,40 @@ MEDIA QUERY FOOTER
   100% {
     transform: rotate(360deg);
   }
+}
+
+
+/* Whatsapp Button */
+.wpp {
+  position: fixed;
+  background: transparent;
+  line-height: 0;
+  color: #25d366;
+  padding: -1;
+  font-size: 70px;
+  border-radius: 2px;
+  left: 15px;
+  bottom: 20px;
+  transition: background 0.5s;
+}
+
+.wpp i {
+  line-height: 0.7em;
+  letter-spacing: 0;
+}
+@media (max-width: 768px) {
+  .wpp {
+    bottom: 15px;
+  }
+}
+
+.wpp:focus {
+  background: transparent;
+  color: #25d366;
+  outline: none;
+}
+
+.wpp:hover {
+  transform: scale(1.25);
+  color: #25d366;
 }
