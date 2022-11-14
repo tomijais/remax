@@ -812,13 +812,12 @@ MEDIA QUERY FOOTER
   position: fixed;
   background: transparent;
   line-height: 0;
-  color: #25d366;
   padding: -1;
   font-size: 70px;
   border-radius: 2px;
-  left: 15px;
+  right: 15px;
   bottom: 20px;
-  transition: background 0.5s;
+  transition: all 0.5s;
 }
 
 .wpp i {
@@ -840,4 +839,5 @@ MEDIA QUERY FOOTER
 .wpp:hover {
   transform: scale(1.25);
   color: #25d366;
+  transition: all 0.5s;
 }
